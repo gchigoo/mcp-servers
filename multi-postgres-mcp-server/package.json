@@ -1,0 +1,39 @@
+{
+  "name": "multi-postgres-mcp-server",
+  "version": "0.1.3",
+  "description": "MCP server for interacting with multiple PostgreSQL databases",
+  "license": "MIT",
+  "author": "Gchigoo",
+  "homepage": "https://github.com/gchigoo/mcp-servers",
+  "bugs": "https://github.com/gchigoo/mcp-servers/issues",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgres",
+    "postgresql",
+    "database",
+    "multi-database",
+    "read-only"
+  ],
+  "type": "module",
+  "bin": {
+    "multi-postgres-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.24.3",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}
